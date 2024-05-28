@@ -17,9 +17,12 @@ export default function LandingPage() {
                 width={75}
                 height={100}
               />
-              <Button className="text-purple-400">About Me</Button>
-              <Button className="text-purple-400">Experience</Button>
-              <Button className="text-purple-400">Misc</Button>
+              <Button className="text-purple-400 ">
+                <a href="#about-me"> About Me </a>
+              </Button>
+              <Button className="text-purple-400">
+                <a href="#experience"> Experience </a>
+              </Button>
             </Toolbar>
           </AppBar>
         </Box>

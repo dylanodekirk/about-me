@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function AboutMe() {
   return (
-    <div className="flex flex-row justify-around bg-[#164e63]">
+    <div id="about-me" className="flex flex-row justify-around bg-[#164e63]">
       <div className="basis-1/3 pt-8 pl-8">
         <Image
           className="rounded-lg drop-shadow-md"
@@ -21,7 +21,7 @@ export default function AboutMe() {
         <Typography variant="body1" align="left">
           My name is Dylan, and I'm a full stack software engineer based out of
           Austin, TX. I firmly believe in an empathy-first approach in design
-          and development for the best user or customer experience, as
+          and development for the best user and customer experience, as
           understanding the user's needs and experiences is paramount to
           crafting exceptional digital solutions. I work towards creating
           intuitive, user-friendly, and accessible products while considering

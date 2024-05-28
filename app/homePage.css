@@ -14,3 +14,11 @@
 .button:hover {
   background-color: #f1f1f1;
 }
+
+@tailwind base;
+html {
+  scroll-behavior: smooth;
+}
+
+@tailwind components;
+@tailwind utilities;
