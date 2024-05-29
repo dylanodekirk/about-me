@@ -13,8 +13,9 @@ export default function Experience() {
         Experience
       </Typography>
       <div className="flex flex-row-reverse">
-        {experience.map((job) => (
+        {experience.map((job, key) => (
           <ExperienceCard
+            key={key}
             company={job.company}
             position={job.position}
             date={job.dates}

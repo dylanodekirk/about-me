@@ -45,8 +45,12 @@ export default function ExperienceCard({
         </Typography>
       </div>
       <List sx={{ listStyleType: "disc" }}>
-        {jobDetails.map((jobDetail) => (
-          <ListItem className="text-cyan-800" sx={{ display: "list-item" }}>
+        {jobDetails.map((jobDetail, key) => (
+          <ListItem
+            key={key}
+            className="text-cyan-800"
+            sx={{ display: "list-item" }}
+          >
             {jobDetail}
           </ListItem>
         ))}
