@@ -29,8 +29,8 @@ export default function AboutMe() {
           my skills, please download by resume here.
         </Typography>
         <div className="grid grid-rows-4 grid-flow-col gap-2 py-8">
-          {skills.map((skill) => (
-            <div className="flex flex-row items-center space-x-4">
+          {skills.map((skill, key) => (
+            <div key={key} className="flex flex-row items-center space-x-4">
               <div>{skill.icon}</div>
               {skill.name && (
                 <Typography variant="body1">{skill.name}</Typography>
