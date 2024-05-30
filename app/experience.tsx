@@ -4,10 +4,10 @@ import { experience } from "./util";
 
 export default function Experience() {
   return (
-    <div id="experience" className="bg-[#e0f2fe]">
+    <div id="experience" className="pb-10 bg-[#e0f2fe]">
       <Typography
         align="left"
-        className="py-8 pl-12 text-cyan-800"
+        className=" font-sans py-8 pl-12 text-cyan-800"
         variant="h3"
       >
         Experience

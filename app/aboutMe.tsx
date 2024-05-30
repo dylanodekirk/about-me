@@ -15,7 +15,7 @@ export default function AboutMe() {
         />
       </div>
       <div className="basis-2/3 px-20">
-        <Typography className="py-8" variant="h3" align="left">
+        <Typography className="font-sans py-8" variant="h3" align="left">
           About Me
         </Typography>
         <Typography variant="body1" align="left">

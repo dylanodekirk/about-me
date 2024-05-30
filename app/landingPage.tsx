@@ -1,7 +1,15 @@
-import { Box, AppBar, Toolbar, Button, Typography } from "@mui/material";
+import {
+  Box,
+  AppBar,
+  Toolbar,
+  Button,
+  Typography,
+  IconButton,
+} from "@mui/material";
 import Image from "next/image";
 import "./homePage.css";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 export default function LandingPage() {
   return (
@@ -43,26 +51,34 @@ export default function LandingPage() {
         </div>
         <div className="flex flex-col justify-center">
           <div className="flex flex-col justify-center">
-            <Typography variant="h4" color="#155e75">
-              Hello, Im
+            <Typography className="font-serif" variant="h4" color="#155e75">
+              Hello, I'm
             </Typography>
-            <Typography variant="h2" color="#155e75">
+            <Typography className="font-serif" variant="h2" color="#155e75">
               Dylan Odekirk
             </Typography>
-            <Typography variant="h4" color="#c084fc">
+            <Typography className="font-sans" variant="h4" color="#c084fc">
               Full Stack Software Engineer
             </Typography>
           </div>
-          <div className="pt-6">
+          <div className="pt-6 flex flex-row space-x-4">
             <Button
-              className="hover:bg-cyan-800"
+              className="hover:bg-purple-200"
               sx={{ bgcolor: "#c084fc" }}
               target="_blank"
               variant="contained"
               href="https://www.linkedin.com/in/dylan-odekirk-14a99299/"
             >
               LinkedIn
-              <ArrowForwardIosIcon className="pl-2" fontSize="small" />
+            </Button>
+            <Button
+              className="text-purple-400 hover:bg-purple-200"
+              sx={{ borderColor: "#c084fc" }}
+              target="_blank"
+              variant="outlined"
+              href="https://github.com/dylanodekirk"
+            >
+              GitHub
             </Button>
           </div>
         </div>
