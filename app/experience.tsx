@@ -7,7 +7,7 @@ export default function Experience() {
     <div id="experience" className="pb-10 bg-[#e0f2fe]">
       <Typography
         align="left"
-        className=" font-sans py-8 pl-12 text-cyan-800"
+        className="font-sans py-8 pl-12 text-cyan-800"
         variant="h3"
       >
         Experience
