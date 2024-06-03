@@ -33,7 +33,7 @@ export default function LandingPage() {
               <Button className="text-purple-400">
                 <a href="#experience"> Experience </a>
               </Button>
-              <Switch {...label} defaultChecked edge="end" />
+              {/* <Switch {...label} defaultChecked edge="end" /> */}
             </Toolbar>
           </AppBar>
         </Box>
