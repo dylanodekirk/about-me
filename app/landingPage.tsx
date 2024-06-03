@@ -4,19 +4,18 @@ import {
   Toolbar,
   Button,
   Typography,
-  IconButton,
+  Switch,
 } from "@mui/material";
 import Image from "next/image";
 import "./homePage.css";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 export default function LandingPage() {
+  const label = { inputProps: { "aria-label": "Switch demo" } };
   return (
     <main>
-      <div>
+      <div id="home">
         <Box sx={{ flexGrow: 1 }}>
-          <AppBar sx={{ bgcolor: "#e0f2fe" }} position="static">
+          <AppBar position="static" sx={{ bgcolor: "#e0f2fe" }}>
             <Toolbar>
               <Image
                 className="invert"
@@ -26,11 +25,15 @@ export default function LandingPage() {
                 height={100}
               />
               <Button className="text-purple-400 ">
+                <a href="#home"> Home </a>
+              </Button>
+              <Button className="text-purple-400 ">
                 <a href="#about-me"> About Me </a>
               </Button>
               <Button className="text-purple-400">
                 <a href="#experience"> Experience </a>
               </Button>
+              <Switch {...label} defaultChecked edge="end" />
             </Toolbar>
           </AppBar>
         </Box>
@@ -72,8 +75,8 @@ export default function LandingPage() {
               LinkedIn
             </Button>
             <Button
-              className="text-purple-400 hover:bg-purple-200"
-              sx={{ borderColor: "#c084fc" }}
+              className="text-purple-400 hover:bg-purple-200 hover:border-purple-400"
+              sx={{ borderColor: "#c084fc", textColor: "#c084fc" }}
               target="_blank"
               variant="outlined"
               href="https://github.com/dylanodekirk"
