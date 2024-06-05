@@ -24,7 +24,7 @@ export const skills = [
   },
   { id: 3, name: "Kotlin", icon: <SiKotlin size="2rem" /> },
   { id: 11, name: "GraphQL", icon: <GrGraphQl size="2rem" /> },
-  { id: 3, name: "Kotlin", icon: <RiTailwindCssFill size="2rem" /> },
+  { id: 3, name: "Tailwind", icon: <RiTailwindCssFill size="2rem" /> },
   { id: 19, name: "Node.js", icon: <FaNodeJs size="2rem" /> },
   { id: 20, name: "MongoDB", icon: <SiMongodb size="2rem" /> },
   { id: 23, name: "GitHub", icon: <FaGithub size="2rem" /> },
