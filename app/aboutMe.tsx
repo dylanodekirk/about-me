@@ -26,7 +26,15 @@ export default function AboutMe() {
           crafting exceptional digital solutions. I work towards creating
           intuitive, user-friendly, and accessible products while considering
           scalability and reusability for long-term growth. For a full list of
-          my skills, please download by resume here.
+          my skills, please download by resume
+          <a
+            className="text-purple-300 ml-1 underline"
+            target="_blank"
+            href="./Dylan_Odekirk.pdf"
+          >
+            here
+          </a>
+          .
         </Typography>
         <div className="grid grid-rows-4 grid-flow-col gap-2 py-8">
           {skills.map((skill, key) => (
