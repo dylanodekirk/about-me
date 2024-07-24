@@ -30,7 +30,7 @@ export default function AboutMe() {
           <a
             className="text-purple-300 ml-1 underline"
             target="_blank"
-            href="./Dylan_Odekirk.pdf"
+            href="./Odekirk_Resume.pdf"
           >
             here
           </a>
