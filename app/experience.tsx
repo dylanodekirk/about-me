@@ -4,7 +4,7 @@ import { experience } from "./util";
 
 export default function Experience() {
   return (
-    <div id="experience" className="pb-10 bg-[#e0f2fe]">
+    <div id="experience" className="pb-10 bg-[#FAFAFA]">
       <Typography
         align="left"
         className="font-sans py-8 pl-12 text-cyan-800"
