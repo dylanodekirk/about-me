@@ -46,7 +46,7 @@ export default function ExperienceCard({
               className="text-[#FAFAFA]"
               variant="h5"
               component="div"
-              mt={0.5} // Adds a bit of space above the position
+              mt={0.5}
             >
               {position}
             </Typography>
