@@ -57,6 +57,18 @@ export const experience = [
       "Tasked with the complete development and implementation of user-facing features, ensuring a well-crafted interface and design.",
       "Crafted high-fidelity mock-ups for 10+ new app features using Figma and Adobe XD which accelerated the development timeline by 20%",
     ],
-    companyLogo: "/deepRiskLogo.webp",
+    companyLogo: "/deepRiskLogo.png",
+  },
+  {
+    id: 3,
+    company: "USAA",
+    location: "Dallas, TX",
+    position: "Software Engineer Intern",
+    dates: "May 2019 - Aug 2019",
+    jobDetails: [
+      "Worked with a team of four interns to participate in code reviews, providing constructive feedback and suggestions to enhance overall code quality.",
+      "Actively engaged in ongoing learning and skill development, staying updated on best practices and emerging technologies in Java development.",
+    ],
+    companyLogo: "/usaaLogo.jpg",
   },
 ];

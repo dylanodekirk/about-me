@@ -1,5 +1,12 @@
-import { Chip, List, ListItem, Typography } from "@mui/material";
-import Image from "next/image";
+import {
+  Box,
+  Typography,
+  Card,
+  CardContent,
+  Avatar,
+  List,
+  ListItem,
+} from "@mui/material";
 
 export default function ExperienceCard({
   company,
@@ -17,44 +24,43 @@ export default function ExperienceCard({
   companyLogo: string;
 }) {
   return (
-    <div className="justify-around px-12">
-      <Image
-        className="py-8 grayscale"
-        src={companyLogo}
-        alt="logo"
-        width="150"
-        height="75"
-      />
-      <Typography
-        sx={{ fontWeight: "bold" }}
-        className="text-cyan-800"
-        variant="h6"
-      >
-        {position}
-      </Typography>
-      <div className="flex flex-row">
-        <Typography className="text-cyan-800 pr-4" variant="subtitle2">
-          {date}
-        </Typography>
-        <Typography
-          sx={{ fontStyle: "italic" }}
-          className="text-cyan-800"
-          variant="subtitle2"
-        >
-          {location}
-        </Typography>
-      </div>
-      <List sx={{ listStyleType: "disc" }}>
-        {jobDetails.map((jobDetail, key) => (
-          <ListItem
-            key={key}
-            className="text-cyan-800"
-            sx={{ display: "list-item" }}
-          >
-            {jobDetail}
-          </ListItem>
-        ))}
-      </List>
-    </div>
+    <Card className="bg-[#293252] bg-opacity-50">
+      <CardContent>
+        <Box display="flex" alignItems="center" mb={1}>
+          <Avatar
+            variant="square"
+            src={companyLogo}
+            sx={{ width: 60, height: 60, mr: 2 }}
+          />
+          <Box sx={{ flexGrow: 1 }}>
+            <Typography
+              className="text-[#FAFAFA]"
+              variant="subtitle1"
+              color="textSecondary"
+              sx={{ display: "flex", justifyContent: "space-between" }}
+            >
+              <span>{company}</span>
+              <span>{date}</span>
+            </Typography>
+            <Typography
+              className="text-[#FAFAFA]"
+              variant="h5"
+              component="div"
+              mt={0.5} // Adds a bit of space above the position
+            >
+              {position}
+            </Typography>
+          </Box>
+        </Box>
+
+        <List sx={{ listStyleType: "disc" }}>
+          {jobDetails.map((jobDetail, key) => (
+            <ListItem key={key} className="text-[#FAFAFA]">
+              {jobDetail}
+            </ListItem>
+          ))}
+        </List>
+      </CardContent>
+    </Card>
   );
 }

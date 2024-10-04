@@ -37,7 +37,6 @@ export default function LandingPage() {
           </Toolbar>
         </AppBar>
       </Box>
-
       <div className="flex flex-row bg-[#0a1128] h-screen items-center pl-12">
         <motion.div
           initial="hidden"
@@ -84,10 +83,15 @@ export default function LandingPage() {
             </div>
           </div>
         </motion.div>
-        <span />
-        <span />
-        <span />
-        <span />
+        <div
+          className="shooting-stars-container"
+          style={{ width: "100vw", height: "100vh", position: "absolute" }}
+        >
+          <span />
+          <span />
+          <span />
+          <span />
+        </div>
       </div>
     </main>
   );
