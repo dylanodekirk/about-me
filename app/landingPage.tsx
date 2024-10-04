@@ -1,8 +1,6 @@
-"use client"; // Mark this as a client-side component
-
+"use client";
 import { Box, AppBar, Toolbar, Button, Typography } from "@mui/material";
-import Image from "next/image";
-import "./homePage.css";
+import "./landingPage.css";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
@@ -24,24 +22,23 @@ export default function LandingPage() {
 
   return (
     <main>
-      <div id="home">
-        <Box ref={ref} sx={{ flexGrow: 1 }}>
-          <AppBar position="static" sx={{ bgcolor: "#0a1128" }}>
-            <Toolbar>
-              <Button className="text-[#f266f2]">
-                <a href="#home"> Home </a>
-              </Button>
-              <Button className="text-[#f266f2]">
-                <a href="#about-me"> About Me </a>
-              </Button>
-              <Button className="text-[#f266f2]">
-                <a href="#experience"> Experience </a>
-              </Button>
-            </Toolbar>
-          </AppBar>
-        </Box>
-      </div>
-      <div className="flex flex-row px-py-4 bg-[#0a1128] h-screen items-center pl-12">
+      <Box ref={ref} sx={{ flexGrow: 1 }}>
+        <AppBar position="static" sx={{ bgcolor: "#0a1128" }}>
+          <Toolbar>
+            <Button className="text-[#f266f2]">
+              <a href="#home"> Home </a>
+            </Button>
+            <Button className="text-[#f266f2]">
+              <a href="#about-me"> About Me </a>
+            </Button>
+            <Button className="text-[#f266f2]">
+              <a href="#experience"> Experience </a>
+            </Button>
+          </Toolbar>
+        </AppBar>
+      </Box>
+
+      <div className="flex flex-row bg-[#0a1128] h-screen items-center pl-12">
         <motion.div
           initial="hidden"
           animate={controls}
@@ -65,7 +62,6 @@ export default function LandingPage() {
                 of Majesty Gaming
               </Typography>
             </div>
-
             <div className="pt-6 pl-2 flex flex-row space-x-4">
               <Button
                 className="hover:bg-pink-200"
@@ -88,6 +84,10 @@ export default function LandingPage() {
             </div>
           </div>
         </motion.div>
+        <span />
+        <span />
+        <span />
+        <span />
       </div>
     </main>
   );
