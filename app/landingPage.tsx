@@ -32,7 +32,7 @@ export default function LandingPage() {
               <a href="#about-me"> About Me </a>
             </Button>
             <Button className="text-[#f266f2]">
-              <a href="#experience"> Experience </a>
+              <a href="#experience"> Technical Experience </a>
             </Button>
           </Toolbar>
         </AppBar>
