@@ -1,3 +1,4 @@
+"use client";
 import AboutMe from "./aboutMe";
 import Experience from "./experience";
 import Footer from "./footer";
