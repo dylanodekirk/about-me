@@ -40,31 +40,35 @@ export default function LandingPage() {
   return (
     <main>
       <Box>
-        <AppBar position="relative" sx={{ bgcolor: "#0a1128", zIndex: 2 }}>
+        <AppBar position="fixed" sx={{ bgcolor: "#0a1128", zIndex: 2 }}>
           <Toolbar>
             <Button
               variant="contained"
-              className="hover:bg-pink-200"
-              sx={{ bgcolor: "#f266f2" }}
+              sx={{ bgcolor: "#0a1128" }}
               href="#home"
             >
               Home
             </Button>
             <Button
-              className="hover:bg-pink-200"
-              sx={{ bgcolor: "#f266f2" }}
-              component="a"
+              variant="contained"
+              sx={{ bgcolor: "#0a1128" }}
               href="#about-me"
             >
               About Me
             </Button>
-            <Button className="text-[#f266f2]" component="a" href="#experience">
+            <Button
+              variant="contained"
+              sx={{ bgcolor: "#0a1128" }}
+              href="#experience"
+            >
               Experience
             </Button>
           </Toolbar>
         </AppBar>
       </Box>
-      <div className="stars absolute inset-0 z-0">{createStars()}</div>
+      <div id="home" className="stars absolute inset-0 z-0">
+        {createStars()}
+      </div>
       <div
         ref={ref}
         className="flex flex-col bg-[#0a1128] min-h-screen pt-20 pl-12 justify-center h-full"

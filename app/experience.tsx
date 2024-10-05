@@ -20,7 +20,7 @@ export default function Experience() {
   }, [controls, inView]);
 
   return (
-    <div>
+    <div id="experience">
       {/* Technical Experience Section */}
       <div className="flex flex-col items-center justify-center w-full pb-8 bg-[#0a1128]">
         <motion.div
