@@ -6,7 +6,6 @@ import { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 
 export default function LandingPage() {
-  const label = { inputProps: { "aria-label": "Switch demo" } };
   const controls = useAnimation();
   const { ref, inView } = useInView({
     threshold: 0.1,
@@ -20,30 +19,62 @@ export default function LandingPage() {
     }
   }, [controls, inView]);
 
+  const createStars = () => {
+    const stars = [];
+    const starCount = 100;
+
+    for (let i = 0; i < starCount; i++) {
+      const starStyle = {
+        left: `${Math.random() * 100}vw`,
+        top: `${Math.random() * 100}vh`,
+        width: `${Math.random() * 3 + 2}px`,
+        height: `${Math.random() * 3 + 2}px`,
+        animationDuration: `${Math.random() * 1 + 1}s`,
+      };
+      stars.push(<div key={i} className="star" style={starStyle} />);
+    }
+
+    return stars;
+  };
+
   return (
     <main>
-      <Box ref={ref} sx={{ flexGrow: 1 }}>
-        <AppBar position="static" sx={{ bgcolor: "#0a1128" }}>
+      <Box>
+        <AppBar position="relative" sx={{ bgcolor: "#0a1128", zIndex: 2 }}>
           <Toolbar>
-            <Button className="text-[#f266f2]">
-              <a href="#home"> Home </a>
+            <Button
+              variant="contained"
+              className="hover:bg-pink-200"
+              sx={{ bgcolor: "#f266f2" }}
+              href="#home"
+            >
+              Home
             </Button>
-            <Button className="text-[#f266f2]">
-              <a href="#about-me"> About Me </a>
+            <Button
+              className="hover:bg-pink-200"
+              sx={{ bgcolor: "#f266f2" }}
+              component="a"
+              href="#about-me"
+            >
+              About Me
             </Button>
-            <Button className="text-[#f266f2]">
-              <a href="#experience"> Technical Experience </a>
+            <Button className="text-[#f266f2]" component="a" href="#experience">
+              Experience
             </Button>
           </Toolbar>
         </AppBar>
       </Box>
-      <div className="flex flex-row bg-[#0a1128] h-screen items-center pl-12">
+      <div className="stars absolute inset-0 z-0">{createStars()}</div>
+      <div
+        ref={ref}
+        className="flex flex-col bg-[#0a1128] min-h-screen pt-20 pl-12 justify-center h-full"
+      >
         <motion.div
           initial="hidden"
           animate={controls}
           variants={{
             visible: { opacity: 1, y: 0 },
-            hidden: { opacity: 0, y: 50 },
+            hidden: { opacity: 0, y: 0 },
           }}
           transition={{ duration: 0.5 }}
         >
@@ -61,7 +92,7 @@ export default function LandingPage() {
                 of Majesty Gaming
               </Typography>
             </div>
-            <div className="pt-6 pl-2 flex flex-row space-x-4">
+            <div className="pt-6 pl-2 flex flex-row space-x-4 z-10 relative">
               <Button
                 className="hover:bg-pink-200"
                 sx={{ bgcolor: "#f266f2" }}
@@ -83,15 +114,6 @@ export default function LandingPage() {
             </div>
           </div>
         </motion.div>
-        <div
-          className="shooting-stars-container"
-          style={{ width: "100vw", height: "100vh", position: "absolute" }}
-        >
-          <span />
-          <span />
-          <span />
-          <span />
-        </div>
       </div>
     </main>
   );

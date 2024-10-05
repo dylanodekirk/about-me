@@ -1,5 +1,5 @@
-import { Typography } from "@mui/material";
-import { skills } from "./util";
+import { Divider, Typography } from "@mui/material";
+import { skills } from "./util/util";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
@@ -78,11 +78,15 @@ export default function AboutMe() {
               </Typography>
             </div>
             <div className="basis-1/4 pl-4">
-              <img className="rounded-full" src="/profilePic.png" />
+              <img className="rounded-full" src="/Images/profilePic.png" />
             </div>
           </div>
         </div>
+        <Divider className="pt-8" variant="middle" />
         <div className="w-3/4 mx-auto justify-center items-center pt-8">
+          <Typography className="text-[#0a1128] pb-4" variant="h4">
+            Technical Skills
+          </Typography>
           <div className="grid grid-rows-4 grid-flow-col justify-items-start">
             {skills.map((skill, key) => (
               <div

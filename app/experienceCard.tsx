@@ -15,6 +15,8 @@ export default function ExperienceCard({
   location,
   jobDetails,
   companyLogo,
+  bgColor,
+  textColor,
 }: {
   company: string;
   position: string;
@@ -22,9 +24,11 @@ export default function ExperienceCard({
   location: string;
   jobDetails: string[];
   companyLogo: string;
+  bgColor: string;
+  textColor: string;
 }) {
   return (
-    <Card className="bg-[#293252] bg-opacity-50">
+    <Card className="bg-opacity-50" style={{ backgroundColor: bgColor }}>
       <CardContent>
         <Box display="flex" alignItems="center" mb={1}>
           <Avatar
@@ -34,7 +38,7 @@ export default function ExperienceCard({
           />
           <Box sx={{ flexGrow: 1 }}>
             <Typography
-              className="text-[#FAFAFA]"
+              style={{ color: textColor }}
               variant="subtitle1"
               color="textSecondary"
               sx={{ display: "flex", justifyContent: "space-between" }}
@@ -43,7 +47,7 @@ export default function ExperienceCard({
               <span>{date}</span>
             </Typography>
             <Typography
-              className="text-[#FAFAFA]"
+              style={{ color: textColor }}
               variant="h5"
               component="div"
               mt={0.5}
@@ -55,7 +59,7 @@ export default function ExperienceCard({
 
         <List sx={{ listStyleType: "disc" }}>
           {jobDetails.map((jobDetail, key) => (
-            <ListItem key={key} className="text-[#FAFAFA]">
+            <ListItem key={key} style={{ color: textColor }}>
               {jobDetail}
             </ListItem>
           ))}
