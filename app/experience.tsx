@@ -77,26 +77,29 @@ export default function Experience() {
           Gaming & Event Experience
         </Typography>
         <div className="flex flex-col w-full items-center justify-center space-y-4">
-          {gamingExperience.map((position, key) => (
-            <motion.div
-              key={key}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3 }}
-              className="w-2/3 mx-auto"
-            >
-              <ExperienceCard
-                company={position.company}
-                position={position.position}
-                date={position.dates}
-                location={position.location}
-                jobDetails={position.jobDetails}
-                companyLogo={position.companyLogo}
-                bgColor={"#f5f2f2"}
-                textColor={"#0a1128"}
-              />
-            </motion.div>
-          ))}
+          {gamingExperience.map((job, key) => {
+            if (!job) return null;
+            return (
+              <motion.div
+                key={key}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3 }}
+                className="w-2/3 mx-auto"
+              >
+                <ExperienceCard
+                  company={job.company}
+                  position={job.position}
+                  date={job.dates}
+                  location={job.location}
+                  jobDetails={job.jobDetails}
+                  companyLogo={job.companyLogo}
+                  bgColor={"#f5f2f2"}
+                  textColor={"#0a1128"}
+                />
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </div>
