@@ -36,7 +36,7 @@ export const technicalExperience = [
     company: "Toast",
     location: "Remote",
     position: "Full Stack Software Engineer",
-    dates: "October 2021 - May 2024",
+    dates: "October 2021 - May 2024 • 2 yrs 9 mos",
     jobDetails: [
       "Initiated and executed iterative feature enhancements; expanded product reach by 50%, ensured robust security protocols, and improved system scalability and reliability, resulting in a 25% increase in user retention",
       "Collaborated and communicated closely with product and design to ensure the highest quality and best customer experiences delivered",
@@ -50,7 +50,7 @@ export const technicalExperience = [
     company: "Deep Risk",
     location: "Dallas, TX",
     position: "Software Engineer and Designer",
-    dates: "November 2020 - October 2021",
+    dates: "November 2020 - October 2021 • 11 mos",
     jobDetails: [
       "Engineered and launched end-to-end full-stack features for a startup space, boosting user engagement by 40% and reducing page load times by 50%",
       "Interfaced and brainstormed with users daily for consistent feedback followed by iterative improvements for the application with minimal buzzwords",
@@ -62,9 +62,23 @@ export const technicalExperience = [
   {
     id: 3,
     company: "USAA",
-    location: "Dallas, TX",
+    location: "Plano, TX",
+    position: "Software Developer I",
+    dates: "December 2019 - October 2020 • 11 mos",
+    jobDetails: [
+      "Practiced true Agile methodology with a Scrum Master, participating in daily standups, sprint planning, and retrospectives.",
+      "Integrated and maintained backend APIs, ensuring secure, scalable, and efficient performance.",
+      "Built responsive front-end interfaces with React and JavaScript, ensuring smooth user experiences.",
+      "Focused on continuous improvement through regular code reviews and following best practices for both front-end and back-end development.",
+    ],
+    companyLogo: "/Images/logos/usaaLogo.jpg",
+  },
+  {
+    id: 4,
+    company: "USAA",
+    location: "Plano, TX",
     position: "Software Engineer Intern",
-    dates: "May 2019 - Aug 2019",
+    dates: "June 2019 - Aug 2019 • 3 mos",
     jobDetails: [
       "Worked with a team of four interns to participate in code reviews, providing constructive feedback and suggestions to enhance overall code quality.",
       "Actively engaged in ongoing learning and skill development, staying updated on best practices and emerging technologies in Java development.",

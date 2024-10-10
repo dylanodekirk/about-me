@@ -92,8 +92,8 @@ export default function LandingPage() {
                 variant="h5"
                 color="#FAFAFA"
               >
-                Software Engineer | Esports Organizer | Team Manager | Founder
-                of Majesty Gaming
+                Software Engineer | Esports Organizer | Founder of Majesty
+                Gaming
               </Typography>
             </div>
             <div className="pt-6 pl-2 flex flex-row space-x-4 z-10 relative">
